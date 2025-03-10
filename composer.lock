@@ -4,8 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c7e3dbdfc97c282707609d966719896",
+    "content-hash": "b1feeaa72e03dff0f208a86272da691b",
     "packages": [
+        {
+            "name": "maxwellzp/english-irregular-verbs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxwellzp/english-irregular-verbs.git",
+                "reference": "3ad4c34213e684bb4c0eb60374a074da66afe538"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxwellzp/english-irregular-verbs/zipball/3ad4c34213e684bb4c0eb60374a074da66afe538",
+                "reference": "3ad4c34213e684bb4c0eb60374a074da66afe538",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maxwellzp\\EnglishIrregularVerbs\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maksim Evtyagin",
+                    "email": "evtyagin.maksim@gmail.com"
+                }
+            ],
+            "description": "PHP OOP wrapper for English irregular verbs",
+            "support": {
+                "source": "https://github.com/maxwellzp/english-irregular-verbs/tree/main",
+                "issues": "https://github.com/maxwellzp/english-irregular-verbs/issues"
+            },
+            "time": "2025-03-10T09:19:17+00:00"
+        },
         {
             "name": "psr/cache",
             "version": "3.0.0",
@@ -2424,7 +2461,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "maxwellzp/english-irregular-verbs": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
