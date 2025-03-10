@@ -68,5 +68,8 @@
             "type": "vcs",
             "url": "https://github.com/maxwellzp/english-irregular-verbs"
         }
-    ]
+    ],
+    "require-dev": {
+        "symfony/maker-bundle": "^1.62"
+    }
 }
