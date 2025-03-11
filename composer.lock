@@ -12,13 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maxwellzp/english-irregular-verbs.git",
-                "reference": "d295bdf6017ef42a008b3bf05cbd41323a1e0809"
+                "reference": "3709e4b9ddcef58d637dc2f85d0f30d2408eb09c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maxwellzp/english-irregular-verbs/zipball/d295bdf6017ef42a008b3bf05cbd41323a1e0809",
-                "reference": "d295bdf6017ef42a008b3bf05cbd41323a1e0809",
+                "url": "https://api.github.com/repos/maxwellzp/english-irregular-verbs/zipball/3709e4b9ddcef58d637dc2f85d0f30d2408eb09c",
+                "reference": "3709e4b9ddcef58d637dc2f85d0f30d2408eb09c",
                 "shasum": ""
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "*"
             },
             "default-branch": true,
             "type": "library",
@@ -26,6 +29,14 @@
                 "psr-4": {
                     "Maxwellzp\\EnglishIrregularVerbs\\": "src/"
                 }
+            },
+            "scripts": {
+                "psr-detect-violations": [
+                    "./vendor/bin/phpcs src/"
+                ],
+                "psr-auto-correct": [
+                    "./vendor/bin/phpcbf src/"
+                ]
             },
             "license": [
                 "MIT"
@@ -41,7 +52,7 @@
                 "source": "https://github.com/maxwellzp/english-irregular-verbs/tree/main",
                 "issues": "https://github.com/maxwellzp/english-irregular-verbs/issues"
             },
-            "time": "2025-03-11T07:37:03+00:00"
+            "time": "2025-03-11T08:40:45+00:00"
         },
         {
             "name": "psr/cache",
