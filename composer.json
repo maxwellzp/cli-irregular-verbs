@@ -52,7 +52,9 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "psr-detect-violations": "./vendor/bin/phpcs src/",
+        "psr-auto-correct": "./vendor/bin/phpcbf src/"
     },
     "conflict": {
         "symfony/symfony": "*"

@@ -8,10 +8,8 @@ class Question
 {
     public function __construct(
         private readonly IrregularVerb $irregularVerb,
-        private readonly MissingForm   $missingForm,
-    )
-    {
-
+        private readonly MissingForm $missingForm,
+    ) {
     }
 
     public function getIrregularVerb(): IrregularVerb
@@ -39,12 +37,12 @@ class Question
     /**
      * @return string
      */
-    public function display(): string {
+    public function display(): string
+    {
         return match ($this->missingForm) {
             MissingForm::BaseForm => sprintf("[%s] - [%s] - [%s]", "-", $this->irregularVerb->getPastSimple(), $this->irregularVerb->getPastParticiple()),
             MissingForm::PastSimple => sprintf("[%s] - [%s] - [%s]", $this->irregularVerb->getBaseForm(), "-", $this->irregularVerb->getPastParticiple()),
             MissingForm::PastParticiple => sprintf("[%s] - [%s] - [%s]", $this->irregularVerb->getBaseForm(), $this->irregularVerb->getPastSimple(), "-"),
         };
     }
-
 }

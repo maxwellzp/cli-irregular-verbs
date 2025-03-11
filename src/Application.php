@@ -40,9 +40,10 @@ class Application
 
 
         foreach ($questions as $question) {
-
             $symfonyQuestion = new SymfonyQuestion(sprintf(
-                'Please enter the missing verb form. %s %s', PHP_EOL, $question->display()
+                'Please enter the missing verb form. %s %s',
+                PHP_EOL,
+                $question->display()
             ));
             $answer = $this->io->askQuestion($symfonyQuestion);
             if ($answer === "s") {
