@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model;
@@ -9,9 +10,8 @@ class Question
 {
     public function __construct(
         private readonly IrregularVerb $irregularVerb,
-        private readonly MissingForm   $missingForm,
-    )
-    {
+        private readonly MissingForm $missingForm,
+    ) {
     }
 
     public function getIrregularVerb(): IrregularVerb
@@ -59,8 +59,11 @@ class Question
     }
 
 
-    public function createExercise(string $baseForm = "-", string $pastSimple = "-", string $pastParticiple = "-"): string
-    {
+    public function createExercise(
+        string $baseForm = "-",
+        string $pastSimple = "-",
+        string $pastParticiple = "-",
+    ): string {
         return sprintf("[%s] - [%s] - [%s]", $baseForm, $pastSimple, $pastParticiple);
     }
 }

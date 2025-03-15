@@ -1,11 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Tests\Unit\Model;
 
 use App\Model\QuizResult;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
+#[CoversClass(QuizResult::class)]
 class QuizResultTest extends TestCase
 {
     public function test(): void
@@ -45,6 +48,6 @@ class QuizResultTest extends TestCase
         $quizResult->plusNotCorrectAnswer();
 
         // Assert
-        $this->assertEquals("3/5", $quizResult->getTotalQuestionsProcessed());
+        $this->assertEquals("3/5", $quizResult->__toString());
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model;
@@ -8,9 +9,7 @@ class QuizResult
     public function __construct(
         private int $totalCorrectAnswers = 0,
         private int $totalNotCorrectAnswers = 0
-    )
-    {
-
+    ) {
     }
 
     public function getTotalCorrectAnswers(): int

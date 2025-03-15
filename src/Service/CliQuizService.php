@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Service;
@@ -23,7 +24,7 @@ class CliQuizService
     public function displayFooter(): void
     {
         $quizResult = $this->getQuizService()->getQuizResult();
-        $this->io->title('The quiz has been completed. Your result: ' . $quizResult );
+        $this->io->title('The quiz has been completed. Your result: ' . $quizResult);
     }
 
     public function createSymfonyQuestion(Question $question): SymfonyQuestion
@@ -31,7 +32,7 @@ class CliQuizService
         return new SymfonyQuestion(sprintf(
             'Please enter the missing verb form. %s %s',
             PHP_EOL,
-            $question->display()
+            $question->getGuessString()
         ));
     }
 
