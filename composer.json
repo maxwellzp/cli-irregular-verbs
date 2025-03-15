@@ -1,4 +1,6 @@
 {
+    "name": "maxwellzp/cli-irregular-verbs",
+    "description": "Symfony project to test your knowledge of irregular verbs in English.",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
