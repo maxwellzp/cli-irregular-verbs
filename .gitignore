@@ -20,3 +20,4 @@
 /.phpunit.cache/
 ###< phpunit/phpunit ###
 /coverage-html/
+/terminal.txt

@@ -10,12 +10,12 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "maxwellzp/english-irregular-verbs": "dev-main",
-        "symfony/console": "6.4.*",
-        "symfony/dotenv": "6.4.*",
+        "symfony/console": "7.2.*",
+        "symfony/dotenv": "7.2.*",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.4.*",
-        "symfony/runtime": "6.4.*",
-        "symfony/yaml": "6.4.*"
+        "symfony/framework-bundle": "7.2.*",
+        "symfony/runtime": "7.2.*",
+        "symfony/yaml": "7.2.*"
     },
     "config": {
         "allow-plugins": {
@@ -23,7 +23,10 @@
             "symfony/flex": true,
             "symfony/runtime": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "8.3"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -65,7 +68,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.4.*"
+            "require": "7.2.*"
         }
     },
     "repositories": [
