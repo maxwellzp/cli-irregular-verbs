@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maxwellzp/english-irregular-verbs.git",
-                "reference": "2a01c1c20e473f42e3fd469cf6223193ded0fd6d"
+                "reference": "c48aae20ef9f54d4438c7422a5e5392e89bc5332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maxwellzp/english-irregular-verbs/zipball/2a01c1c20e473f42e3fd469cf6223193ded0fd6d",
-                "reference": "2a01c1c20e473f42e3fd469cf6223193ded0fd6d",
+                "url": "https://api.github.com/repos/maxwellzp/english-irregular-verbs/zipball/c48aae20ef9f54d4438c7422a5e5392e89bc5332",
+                "reference": "c48aae20ef9f54d4438c7422a5e5392e89bc5332",
                 "shasum": ""
             },
             "require-dev": {
@@ -61,7 +61,7 @@
                 "source": "https://github.com/maxwellzp/english-irregular-verbs/tree/main",
                 "issues": "https://github.com/maxwellzp/english-irregular-verbs/issues"
             },
-            "time": "2025-03-15T13:04:14+00:00"
+            "time": "2025-04-16T13:46:35+00:00"
         },
         {
             "name": "psr/cache",

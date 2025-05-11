@@ -11,7 +11,14 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(QuizResult::class)]
 class QuizResultTest extends TestCase
 {
-    public function test(): void
+    public function testInitialCounts(): void
+    {
+        $result = new QuizResult();
+        $this->assertSame(0, $result->getTotalCorrectAnswers());
+        $this->assertSame(0, $result->getTotalNotCorrectAnswers());
+    }
+
+    public function testPlusCorrectAnswerIncreaseCorrectAnswersCount(): void
     {
         // Arrange
         $quizResult = new QuizResult();
@@ -23,7 +30,7 @@ class QuizResultTest extends TestCase
         $this->assertEquals(1, $quizResult->getTotalCorrectAnswers());
     }
 
-    public function test2(): void
+    public function testPlusCorrectAnswerDoesNotIncreaseNotCorrectAnswersCount(): void
     {
         // Arrange
         $quizResult = new QuizResult();
@@ -35,7 +42,7 @@ class QuizResultTest extends TestCase
         $this->assertEquals(1, $quizResult->getTotalNotCorrectAnswers());
     }
 
-    public function test3(): void
+    public function testCountingAnswers(): void
     {
         // Arrange
         $quizResult = new QuizResult();

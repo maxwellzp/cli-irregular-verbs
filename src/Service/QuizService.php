@@ -4,25 +4,24 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Model\MissingForm;
+use App\Enum\MissingForm;
 use App\Model\Question;
 use App\Model\QuizResult;
-use Maxwellzp\EnglishIrregularVerbs\Factory\IrregularVerbFactory;
 use Maxwellzp\EnglishIrregularVerbs\Model\IrregularVerb;
+use Maxwellzp\EnglishIrregularVerbs\Repository\IrregularVerbRepository;
 
 class QuizService
 {
     private readonly QuizResult $quizResult;
 
-    public function __construct()
+    public function __construct(private IrregularVerbRepository $irregularVerbRepository)
     {
         $this->quizResult = new QuizResult();
     }
 
     public function getIrregularVerbs($num): array
     {
-        $factory = new IrregularVerbFactory();
-        return $factory->getRandomSet($num);
+        return $this->irregularVerbRepository->getRandomSet($num);
     }
 
     public function createQuestions(array $irregularVerbs): array
@@ -42,13 +41,15 @@ class QuizService
 
     public function checkIfAnswerCorrect(string $answer, Question $question): bool
     {
-        if ($answer === $question->getAnswer()) {
+        $isCorrect = mb_strtolower(trim($answer)) === mb_strtolower($question->getAnswer());
+
+        if ($isCorrect) {
             $this->quizResult->plusCorrectAnswer();
-            return true;
         } else {
             $this->quizResult->plusNotCorrectAnswer();
-            return false;
         }
+
+        return $isCorrect;
     }
 
     /**

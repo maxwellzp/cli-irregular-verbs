@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Enum\MissingForm;
 use Maxwellzp\EnglishIrregularVerbs\Model\IrregularVerb;
 
 class Question
 {
     public function __construct(
         private readonly IrregularVerb $irregularVerb,
-        private readonly MissingForm $missingForm,
-    ) {
+        private readonly MissingForm   $missingForm,
+    )
+    {
     }
 
     public function getIrregularVerb(): IrregularVerb
@@ -63,7 +65,8 @@ class Question
         string $baseForm = "-",
         string $pastSimple = "-",
         string $pastParticiple = "-",
-    ): string {
+    ): string
+    {
         return sprintf("[%s] - [%s] - [%s]", $baseForm, $pastSimple, $pastParticiple);
     }
 }

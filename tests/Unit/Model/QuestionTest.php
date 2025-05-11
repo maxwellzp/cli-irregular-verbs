@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Model;
 
-use App\Model\MissingForm;
+use App\Enum\MissingForm;
 use App\Model\Question;
 use Maxwellzp\EnglishIrregularVerbs\Model\IrregularVerb;
 use PHPUnit\Framework\Attributes\CoversClass;
