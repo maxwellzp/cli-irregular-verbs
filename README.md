@@ -26,6 +26,10 @@ composer install
 ```bash
 bin/console app:grammar-quiz
 ```
+or
+```bash
+bin/console app:grammar-quiz [number of questions]
+```
 * Enter the correct answer and press the Enter button.
 ## Running Tests
 
